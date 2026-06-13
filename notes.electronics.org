@@ -1,29 +1,46 @@
-* fundamentos de electronica sesion 1 pagina 4 - 8 
-
-** glosario 
+* fundamentos de electronica
+** glosario
++ q: carga
++ i: corriente
++ t: tiempo
++ v: voltaje
++ p: poder
++ w: energia
 + Coulombs: las cargas electricas se miden en Coulombs (C)
 + Amperios: corriente electrica se mide en Amperios (A)
++ volts: la energia necesaria para poder mover cargas entre puntos (V)
++ watts: es el ratio de energia consumida o absorbida (W)
++ Joules: es la capacidad de hacer trabajo
 + Corriente constante: la corriente constante se representa con (I)
 + Corriente variante: la corriente varia se representa con (i)
 
 ** que son las cargas electricas?
-la materia se puede cargar electricamente almacenando electrones donde cada electron equivale a:   $-1.602e-19C$
+la materia se puede cargar electricamente almacenando electrones donde cada electron equivale a: $-1.602e-19C$
 
 ** que es la corriente?
-la corriente el movimiento de lasc argas electricas. ya que una cualidad
+la corriente el movimiento de las cargas electricas. ya que una cualidad
 de las cargas electricas es que osn moviles y se rigen por la ley de la conservacion de la energia
 
-duda: ¿si se rige por la conservacion de la energia entonces en un sistema obvio cerrado no hay cambios en las cargas? ¿entonces no hay perdidas de energia?
+** Que es el votaje?
+el voltaje es la energia que se necesita para poder mover electrones de un punto a otro esta se mida en volts(V).
+los volts en circuitos nos ayudan a ver la diferencia de voltaje entre un punto y otro generalmente alrededor de elemtos
+donde tendremos un punto con el simbolo + punto a y otro con el simbolo - punto b donde volts se puede interpretar como
+el punto a tiene una bajada de xV con respecto al punto b o viceversa el punto b presenta una subida de xV con
+respecto al punto a. para calcular voltaje se tiene la formula: $V_{ab}=\frac{dw}{dq}$ 
+
+** Que es el poder?
+el poder es el gasto de energia o su absorcion se mide en watts(w) para diferencias si un elemento absorbe energia o si este la
+produce se tiene el signo + y - donde +p quiere decir que absorbe la energia mientras -p quiere decir que esta saliendo energia
+del elemento. el poder se calcula con la formula: $p=vi$ y para calcular la absorcion o produccion de energia en un intervalo
+se usa la formula $\int_{t_0}^{t_1} vidt$
 
 ** Tipos de corriente
 existen 2 tipos de corriente corriente directa (DC) conrriente alterna (AC)
 la corriente directa no varia con el tiempo y solo fluye en una direccion
 mientras que la corriente alterna puede fluir en ambas direcciones
 
-duda: ¿que conlleva que la corriente cambie su direccion?
+dudas:
+- ¿que conlleva que la corriente cambie su direccion?
+- ¿si se rige por la conservacion de la energia entonces en un sistema obvio cerrado no hay cambios en las cargas? ¿entonces no hay perdidas de energia?
 
-** problemas
-+ cuanta carga representan 4600 electrones?
-  $4600*(-1.602e-19)=-7.3692e-16C$
-+ cuanta carga representan 6.667 billones de protones?
-  $6.667e-9*(1.602e-19)=1.0680534e-9C$
+continua en pag 13
