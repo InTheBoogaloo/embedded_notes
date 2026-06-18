@@ -54,11 +54,12 @@ hay 2 tipos de fuentes las dependientes e independientes
   algun lugar del circuito.
 
 ** conexiones en paralelo
-cuando un elemento se conecta en paralelo tiene el mismo voltaje que su conector las conexiones en paralelo son aquellas
+cuando un elemento se conecta en paralelo y comparten 2 *nodos* entonces tiene el mismo voltaje que su conector las conexiones en paralelo son aquellas
 que tienen los terminales positivos y negativos conectados entre si
 
 ** conexiones en serie
 las conexiones en serie son aquellas que conectan un terminal a su opuesto entre elementos
+los elementos conectados en serie si comparten exclusivamente un *nodo* entonces van a compartir corriente
 
 ** que es la resistencia?
 la resistencia(R) es la capacidad de los materiales de oponerse a el flujo de corriente este varia segun el area del grosor su larga y la resistibilidad del material
@@ -86,6 +87,25 @@ mientras que las resistencias que no la cumplen son las *resistencias no lineas*
 un ejemplo de resistencias no lineales son los diodos.
 en la practica todas las resistencias se pueden llegar a comportar como una resistencia *no lineal* bajo ciertas condiones
 
+** nodos, ramas y loops
+- ramas: las ramas son los elementos en el circuito
+- nodos: son los puntos de 2 o mas ramas
+- loops: las rutas entre nodos por las cuales solo es posible llegar pasando como maximo por un nodo mas.
+  existen 2 tipos de loops independientes y dependientes los independientes son aquellos que tienen una rama que no es miembro de otro loop
+
+para saber saber si esta esta bien esquematizado un circuito tenemos esta formual &b=l+n-1& donde b son las ramas, n los nodos y l los loops independientes
+
+** las leyes de kirchoff
+las leyes de kirchoff son referentes a el voltaje o a la corriente una ley por cada una de estas
+- kcl: la ley de la corriente de kirchoff nos dice que en un nodo o seccion seleccionada la suma de las corrientes debe ser igual a 0 o la suma de las corrientes
+  que entran tiene que ser igua a la suma de las corrientes que salen.
+  tambien dicta que un circuito no puede tener 2 fuentes de corriente $i$ conectadas en serie a menos que sean iguales $i_1=i_2$ de otra forma se viola la la ley de kirchoff
+- kvl: la ley del voltae de kirchoff nos dice que en una ruta cerrada la suma de los voltajes debe ser igual a 0 o igual a los voltajes de signo contrario.
+  para tomar el signo de los voltajes se toma en cuenta la polaridad por la que entramos podemos ir tanto a favor de manesillas del reloj como encontra el resultado
+  es el mismo en ambos casos pero con signos diferentes.
+  tambien dicta que un circuito no puede tener 2 fuentes de voltaje $v$ conectadas en paralelo a menos que estas sean iguales $v_1=v_2$
+en general estas leyes nos sirven para poder simplificar tanto fuentes de voltaje como fuentes de corriente combinandolas tras realizar el calculo
+
 ** observaciones
 podemos obtener un valor integrando una formula y viceversa me explico queremos calcular carga(q) pero solo tenemos la funcion de la corriente(i)
 si derivamos corriente obtendremos q por lo siguiente:
@@ -95,5 +115,7 @@ dudas:
 - ¿que conlleva que la corriente cambie su direccion?
 - ¿si se rige por la conservacion de la energia entonces en un sistema obvio cerrado no hay cambios en las cargas? ¿entonces no hay perdidas de energia?
 
+
+buscar mas ejercisios de ley de ohm y kirchoff
   
-continua en pagina 52
+pagina 61
