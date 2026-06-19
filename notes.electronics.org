@@ -56,10 +56,20 @@ hay 2 tipos de fuentes las dependientes e independientes
 ** conexiones en paralelo
 cuando un elemento se conecta en paralelo y comparten 2 *nodos* entonces tiene el mismo voltaje que su conector las conexiones en paralelo son aquellas
 que tienen los terminales positivos y negativos conectados entre si
+*** resistencias en paralelo / divisores de corriente
+las resistencias en paralelo son llamadas tambien *divisores de corriente* la forma la forma de calcular la resistencia equivalente para asi poder simplificar el
+circuito es con la formula $R_{eq}=\frac{R1R2}{R_1+R_2}$ pero lo usual es calcularla usando G entonces usamos esta formula $G_{eq}=G_1+G_2+..+G_n$  para calcular
+la corriente se usa la formula $i_n=\frac{G_n}{G_1+G_2+...+G_N}i$
 
 ** conexiones en serie
 las conexiones en serie son aquellas que conectan un terminal a su opuesto entre elementos
-los elementos conectados en serie si comparten exclusivamente un *nodo* entonces van a compartir corriente
+los elementos conectados en serie si comparten exclusivamente un *nodo* entonces van a compartir corriente.
+*** resistencias en serie / divisores de voltaje
+las resistencias en serie tambien son denominadas como divisores de voltaje esto debido a que la corriente que pase a travez de estas mismas vera si voltaje dividido
+entre las resistencias como lo indica la su formula: $v_n=\frac{R_n}{R_1 + R_2 + ... + R_N}v$ tambien nos ayuda a simplificar un circuito sumando todas las resistencias que esten en
+serie para obtener su resistencia equivalente y poder remplazarla en el circuito $R_{eq}=R_1 + R_2 + ... + R_n$ asi podiendo reducir N resistencias a solo 1 con el valor
+de la resistencia equivalente.
+principio del divisor de voltaje: entre mas grande la resistencia mas grande la caida del voltaje
 
 ** que es la resistencia?
 la resistencia(R) es la capacidad de los materiales de oponerse a el flujo de corriente este varia segun el area del grosor su larga y la resistibilidad del material
@@ -93,7 +103,7 @@ en la practica todas las resistencias se pueden llegar a comportar como una resi
 - loops: las rutas entre nodos por las cuales solo es posible llegar pasando como maximo por un nodo mas.
   existen 2 tipos de loops independientes y dependientes los independientes son aquellos que tienen una rama que no es miembro de otro loop
 
-para saber saber si esta esta bien esquematizado un circuito tenemos esta formual &b=l+n-1& donde b son las ramas, n los nodos y l los loops independientes
+para saber saber si esta esta bien esquematizado un circuito tenemos esta formual $b=l+n-1$ donde b son las ramas, n los nodos y l los loops independientes
 
 ** las leyes de kirchoff
 las leyes de kirchoff son referentes a el voltaje o a la corriente una ley por cada una de estas
@@ -115,7 +125,4 @@ dudas:
 - ¿que conlleva que la corriente cambie su direccion?
 - ¿si se rige por la conservacion de la energia entonces en un sistema obvio cerrado no hay cambios en las cargas? ¿entonces no hay perdidas de energia?
 
-
-buscar mas ejercisios de ley de ohm y kirchoff
-  
-pagina 61
+  pagina 69
