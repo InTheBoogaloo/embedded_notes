@@ -116,13 +116,20 @@ las leyes de kirchoff son referentes a el voltaje o a la corriente una ley por c
   tambien dicta que un circuito no puede tener 2 fuentes de voltaje $v$ conectadas en paralelo a menos que estas sean iguales $v_1=v_2$
 en general estas leyes nos sirven para poder simplificar tanto fuentes de voltaje como fuentes de corriente combinandolas tras realizar el calculo
 
+** analisis nodal
+nos sirve para poder calcular el voltaje de nodos especificos para esto necesitamos declarar un /nodo referencia/ este tendra la numeracion 0 y es de donde nos basaremos
+para realizar y enumerar los demas nodos donde se veran numeras de la forma $n - 1$ donde n es el numero de nodos, el analisis nodal consiste de algunos pasos los cuales
+son:
+- aplicamos la ley de la corriente de kirchoff (kcl) en los nodos 
+- una vez indentificamos todas la corrientes que cruzan por nuestros /nodos no referencia/ entonces aplicamos las siguiente formula para el calculo del voltaje
+ $i_n=\frac{v_{alto}-v_{bajo}}{R}$ 
+- una vez aplicamos las formulas en nuestra kcl usando el metodo que queramos por ejemplo regla de cramer para poder obtener los voltajes de cada nodo
+
 ** observaciones
 podemos obtener un valor integrando una formula y viceversa me explico queremos calcular carga(q) pero solo tenemos la funcion de la corriente(i)
 si derivamos corriente obtendremos q por lo siguiente:
 $i=\frac{dq}{dt}$ entonces si integramos esto obtendremos $q=\int{idt}$ 
 
-dudas:
+** dudas:
 - ¿que conlleva que la corriente cambie su direccion?
 - ¿si se rige por la conservacion de la energia entonces en un sistema obvio cerrado no hay cambios en las cargas? ¿entonces no hay perdidas de energia?
-
-  pagina 69
