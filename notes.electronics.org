@@ -124,6 +124,30 @@ son:
 - una vez indentificamos todas la corrientes que cruzan por nuestros /nodos no referencia/ entonces aplicamos las siguiente formula para el calculo del voltaje
  $i_n=\frac{v_{alto}-v_{bajo}}{R}$ 
 - una vez aplicamos las formulas en nuestra kcl usando el metodo que queramos por ejemplo regla de cramer para poder obtener los voltajes de cada nodo
+*** analisis nodal con fuentes de voltaje
+cuando se le agrega una fuente de voltaje a un circuito entonces es donde cambia un poco el analisis nodal y nos crea 2 posibles situacion
+- fuente a tierra - nodo: por suerte esta no cambia nada el proceso del analisis nodal
+- fuente a nodo - nodo: un super nodo es la conexion entre 2 nodos se da cuando hay una fuente de voltaje entre nodos no referenciales esto como mencione junta ambos
+  nodos en un supernodo.
+la existencia de los supernodos hace que cambie un poco nuestro analisis nodal haciendo que en lugar de aplicar el proceso por cada nodo simplemente juntamos ambos
+nodos en un mismo proceso hacieno kcl en todo el nodo, despues aplicamos la formula y luego tendriamos que usar la kvl en nuestro supernodo para poder realizar
+despejes de la ecuacion eso seria nuestro proceso dada una fuente de voltaje en nuestor analisis nodal
+
+** analisis de malla
+nos sirve para poder caluclar las corrientes que pasan por una *malla*, la cual la podemos definir como un loop que no contiene otro dentro
+para poder aplicar el analisis de malla tenemos un factor a considerar que nos puede alterar el procedimiento y es si este contiene fuentes de corriente o no
+si contiene fuentes de corriente entonces obviamos esa rama y formamos una *supermalla* donde esta consiste en un loop donde se fusionen 2 loops
+algo a recalcar es que solo se puede aplicar analisis de malla si el circuito es /planar/ lo que significa que este no tiene ramas ni nodos atravezando a otros o si
+se puede redibujar para que cumpla estas condiciones
+*** analisis malla sin fuente de alimentacion
+para hacer el analisis sin fuente de alimentacion tenemos que aplicar kcl en cada malla, una vez obtenida tenemos que aplicar la ley de ohm, esto nos va a generar un
+sistema de ecuaciones el cual resolvemos con el metodo que queramos y asi obtenemos cada corriente del circuito
+
+** que analisis usar?
+para poder elegir que analisis usar se basa en factores netamente referentes al circuito como lo podrian ser que tantos nodos o mallas tiene, si tiene mallas
+entonces el analisis de malla es mejor, si tiene menos nodos entonces el analisis nodal es el mejor.
+al igual que si tiene muchos elementos en serie, muchas fuentes de voltaje y supermallas entonces es mejor usar analisis de malla. Pero si tiene mas
+elementos conectados en paralelo, muchas fuentes de voltaje y mas supernodos entonces esta claro que deberia ser analisis nodal.
 
 ** observaciones
 podemos obtener un valor integrando una formula y viceversa me explico queremos calcular carga(q) pero solo tenemos la funcion de la corriente(i)
@@ -133,3 +157,10 @@ $i=\frac{dq}{dt}$ entonces si integramos esto obtendremos $q=\int{idt}$
 ** dudas:
 - ¿que conlleva que la corriente cambie su direccion?
 - ¿si se rige por la conservacion de la energia entonces en un sistema obvio cerrado no hay cambios en las cargas? ¿entonces no hay perdidas de energia?
+
+** posibles repasos
+- analisis nodal
+- ley de ohm
+- ley de kirchoff
+
+  sigue en la pagina 143
