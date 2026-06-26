@@ -1,0 +1,33 @@
+* ASM x86_64
+** herramientas
+para el uso de ASM se tiene herramientas en distros unix que son las que usaremos para el estudio de este mismo
+- as the portable GNU assembler
+- ld the GNU linker
+son las herramientas a usar para poder generar un archivo .o usaremos *as* sobre un .s el cual contendra nuestro codigo fuente y el comando ln para poder
+hacer que el codigo objeto sea creado a un ejecutable
+** assambler directives
+las /assembler directives/ son lexemas que son parte de la sintaxis del ensamblador pero no estan ligados a la arquitectura como instrucciones.
+las /assembler directibes/ inician con punto(.) tambien son llamadas pseudo-operaciones.
+*** etiquetas
+la directiva .section nos ayuda para separar el codigo en direntes secciones cada una segun su utilidad
+- .data: en esta seccion es donde se declaran las variables
+- .text: esta seccion es donde las instrucciones viven
+- .globl: esta etiqueta se le agrega a un simbolo para evitar que este se descarte despues del ensamblado porque el linker lo va a necesitar
+#+BEGIN_SRC asm
+          .section .data // seccion de variables
+          .section .text // seccion de instruccioens
+          .globl _start // esto es un /simbolo/ lo que significa que se va a remplazar por otra cosa durante el ensamblado o el likeado
+  _start: // esto es una label es basicamente similar a una funcion es lo que replaza a un simbolo
+          movl $1, %eax 
+          movl $0, %ebx
+          int $0x80
+#+END_SRC
+
+** instrucciones
+las instrucciones en ensamblador son las operaciones que se pueden realizar ya sea sobre direcciones, numeros o registros.
+estas operaciones tienen operandos donde se pueden tener ya sean 2 o 1 dependiendo del tipo de instruccion un ejemplo de estas instrucciones son las
+operaciones que ya conocemos como lo son la suma, resta y multiplicacion /addl, subl, imull/ donde el primer termino se le llama source y el segundo
+termino se le llama source(fuente) y el segundo destination(destino), todas las operaciones cuentan con un soruce pero no todas cuentan con un destination
+en estas operaciones el resultado es operado y guarda los resultados en el destination.
+
+

@@ -149,6 +149,19 @@ entonces el analisis de malla es mejor, si tiene menos nodos entonces el analisi
 al igual que si tiene muchos elementos en serie, muchas fuentes de voltaje y supermallas entonces es mejor usar analisis de malla. Pero si tiene mas
 elementos conectados en paralelo, muchas fuentes de voltaje y mas supernodos entonces esta claro que deberia ser analisis nodal.
 
+** propieda de linealidad
+la propiedad de linearidad enmarca la relacion de causa y efecto dentro del circuito donde la causa o /exitacion/ es producida por un input siendo el
+voltaje por ejemplo mientras que el efecto o /respuesta/ es el resultado del mismo input siendo este el output en el circuito lo que dicta la linealidad
+es que si el ouput es equivalente al input en el sentido de que si este mismo es multiplicado por una contante entonces si output tambien debe ser
+multiplicado por la misma constante un ejemplo de esto es el voltaje $v=iR$ donde si la corrientese multiplica por la constante k entonces nos deberia
+quedar asi la fomrula segun la linealidad $Kv=iKR$ entonces podemos determinar que la linealidad afecta a todo menos a p porque para calcular p se
+vuelve una formula cuadratica.
+
+** superposicion
+es basicamente si un circuito tiene mas de una fuente independiente entonces puedes apagarlas dejando solo una y haciendo como si las apagadas no existieran
+para hacer mas faciles los calculos en teoria pero si hay muchas fuentes independientes lo malo es que tienes que hacer muchos calculos esto porque
+el proceso se repite: dejar solo una fuentem, hacer analisi de malla o nodal y asi con cada fuente.
+
 ** observaciones
 podemos obtener un valor integrando una formula y viceversa me explico queremos calcular carga(q) pero solo tenemos la funcion de la corriente(i)
 si derivamos corriente obtendremos q por lo siguiente:
@@ -158,9 +171,9 @@ $i=\frac{dq}{dt}$ entonces si integramos esto obtendremos $q=\int{idt}$
 - ¿que conlleva que la corriente cambie su direccion?
 - ¿si se rige por la conservacion de la energia entonces en un sistema obvio cerrado no hay cambios en las cargas? ¿entonces no hay perdidas de energia?
 
-** posibles repasos
+** TEMAS IMPORTANTES PARA REPASAR
 - analisis nodal
 - ley de ohm
 - ley de kirchoff
-
-  sigue en la pagina 143
+- analisis nodal y malla
+- superposicion
